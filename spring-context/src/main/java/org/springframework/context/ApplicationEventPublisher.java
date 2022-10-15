@@ -17,6 +17,9 @@
 package org.springframework.context;
 
 /**
+ * 负责发布事件的接口。
+ * 发布通过ApplicationEventMulticaster来将Event传递给ApplicationListen
+ *
  * Interface that encapsulates event publication functionality.
  *
  * <p>Serves as a super-interface for {@link ApplicationContext}.

@@ -20,6 +20,9 @@ import java.util.EventListener;
 import java.util.function.Consumer;
 
 /**
+ * 负责事件监听的接口, 使用观察者模式。
+ * 通过onApplicationEvent(E event)将事件通知给listener
+ *
  * Interface to be implemented by application event listeners.
  *
  * <p>Based on the standard {@code java.util.EventListener} interface

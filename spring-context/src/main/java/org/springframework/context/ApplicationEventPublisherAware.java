@@ -19,6 +19,10 @@ package org.springframework.context;
 import org.springframework.beans.factory.Aware;
 
 /**
+ * 事件发布中心, 自定义的发布类要实现该类。
+ * 通过setApplicationEventPublisher方法设置ApplicationEventPublisher，
+ * 通过setApplicationEventPublisher方法设置ApplicationEventPublisher的publishEvent来发布消息
+ *
  * Interface to be implemented by any object that wishes to be notified
  * of the ApplicationEventPublisher (typically the ApplicationContext)
  * that it runs in.
