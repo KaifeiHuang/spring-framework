@@ -48,6 +48,9 @@ import java.util.function.Consumer;
 public interface ApplicationListener<E extends ApplicationEvent> extends EventListener {
 
 	/**
+	 * 处理监听事件
+	 * 一个hook, 自定义的监听器逻辑可以写在这里
+	 *
 	 * Handle an application event.
 	 * @param event the event to respond to
 	 */
