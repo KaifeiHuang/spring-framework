@@ -20,6 +20,13 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.Aware;
 
 /**
+ *
+ * 用于构建获取ApplicationContext的桥梁，能做一切利用ApplicationContext能做的事. 例如：
+ *  <li>1. 通过ApplicationContext来获取Bean</li>
+ *  <li>2. 通过ApplicationContext来发布事件</li>
+ *  <li>3. 获取MessageSource</li>
+ *
+ *
  * Interface to be implemented by any object that wishes to be notified
  * of the {@link ApplicationContext} that it runs in.
  *

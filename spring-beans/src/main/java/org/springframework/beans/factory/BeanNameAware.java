@@ -17,6 +17,8 @@
 package org.springframework.beans.factory;
 
 /**
+ * 提供设置BeanName的hook
+ *
  * Interface to be implemented by beans that want to be aware of their
  * bean name in a bean factory. Note that it is not usually recommended
  * that an object depends on its bean name, as this represents a potentially
