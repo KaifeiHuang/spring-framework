@@ -25,6 +25,8 @@ See the [Micro-Benchmarks](https://github.com/spring-projects/spring-framework/w
 
 See the [Build from Source](https://github.com/spring-projects/spring-framework/wiki/Build-from-Source) wiki page and the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
+note: 用jdk17编译
+
 ## Continuous Integration Builds
 
 Information regarding CI builds can be found in the [Spring Framework Concourse pipeline](ci/README.adoc) documentation.
