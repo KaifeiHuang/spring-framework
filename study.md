@@ -34,3 +34,5 @@ public interface ApplicationEventPublisherAware extends Aware {
 
 }
 ```
+
+FactoryBean与BeanFactory
