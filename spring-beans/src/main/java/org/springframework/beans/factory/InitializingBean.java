@@ -18,7 +18,7 @@ package org.springframework.beans.factory;
 
 /**
  *
- * 负责bean的属性设置号之后的Bean操作
+ * 负责bean的属性设置好之后的Bean操作
  *
  * Interface to be implemented by beans that need to react once all their properties
  * have been set by a {@link BeanFactory}: e.g. to perform custom initialization,

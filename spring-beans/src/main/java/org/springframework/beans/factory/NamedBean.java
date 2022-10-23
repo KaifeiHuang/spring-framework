@@ -17,6 +17,9 @@
 package org.springframework.beans.factory;
 
 /**
+ *BeanNameAware的对应的NamedBean，用于获取对象的名字
+ *
+ *
  * Counterpart of {@link BeanNameAware}. Returns the bean name of an object.
  *
  * <p>This interface can be introduced to avoid a brittle dependence on

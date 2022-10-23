@@ -19,6 +19,12 @@ package org.springframework.beans.factory;
 import org.springframework.lang.Nullable;
 
 /**
+ * BeanFactory是个Factory，也就是IOC容器或对象工厂，FactoryBean是个Bean。
+ * 在Spring中，所有的Bean都是由BeanFactory(也就是IOC容器)来进行管理的。
+ * 但对FactoryBean而言，这个Bean不是简单的Bean，而是一个能生产或者修饰对象生成的工厂Bean,
+ * 它的实现与设计模式中的工厂模式和修饰器模式类似。
+ * 不直接作为一个bean实例使用, 而是一个类暴露作为工厂使用
+ *
  * Interface to be implemented by objects used within a {@link BeanFactory} which
  * are themselves factories for individual objects. If a bean implements this
  * interface, it is used as a factory for an object to expose, not directly as a
