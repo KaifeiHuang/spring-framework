@@ -5,9 +5,28 @@ A: org.springframework.context.support.AbstractApplicationContext#refresh
 - spring这个容器时存的是Bean， 这些bean是如何创建的？bean创建好了存放在哪？外面如何取?
 - springboot项目里使用@Component @Serverice 这些注解，spring是如何发现及放入容器的？  
 - spring这个容器创建好后，能在注册Bean吗？ 如何注册？
+  - 能
+  - org.springframework.beans.factory.support.DefaultListableBeanFactory.registerSingleton
+  
+```java
+org.springframework.context.support.AbstractApplicationContext.initMessageSource
+// Use empty MessageSource to be able to accept getMessage calls.
+			DelegatingMessageSource dms = new DelegatingMessageSource();
+			dms.setParentMessageSource(getInternalParentMessageSource());
+			this.messageSource = dms;
+			beanFactory.registerSingleton(MESSAGE_SOURCE_BEAN_NAME, this.messageSource);
+			if (logger.isTraceEnabled()) {
+				logger.trace("No '" + MESSAGE_SOURCE_BEAN_NAME + "' bean, using [" + this.messageSource + "]");
+			}
+```
 - spring源代码的架构是怎样的？  
 - spring的源码都说写NB， NB在哪里？设计模式有哪些？扩展点在哪里？  
-  - 责任链模式： Event  
+  - 设计模式
+    - 责任链模式： Event  
+    - 模板方法
+  - 扩展点
+    - org.springframework.context.support.AbstractApplicationContext.refresh
+![img_1.png](img_1.png)
 - spring的命名很规范，对应的从命名就能看出功能的有哪些？
   - XXXAware: 提供XXX类的IOC
   - XXXProcessor： 提后XXX的处理功能
@@ -102,7 +121,7 @@ public interface InitializingBean {
   void afterPropertiesSet() throws Exception;
   }
 ```
-
+  
 
 org.springframework.beans.factory.config.BeanPostProcessor#postProcessBeforeInitialization
 BeanDefinition
